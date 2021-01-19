@@ -4,3 +4,5 @@
 0x01 template模板继承有什么作用？
 
 0x02 template模板继承的实现
+     简单来讲，就是在base里需要继承的地方，用{% block content %}{% endblock %}包起来（content为自己写的内容，和html标签对应，例如class等等）
+     然后在子模版中如果用{% block content %}{% endblock %}，如果这个包住的地方有变化，就会改写子模版中包起来的内容，实现子模版自定义。
