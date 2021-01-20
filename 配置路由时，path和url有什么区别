@@ -1,0 +1,7 @@
+path和url都可以用来配置路由，但是在django3中，官方文档中在配置url时，都用path。
+
+url举例：
+        url(r'^xxxx/$',views.xxxx,name='xxxx'), 去掉$后，无法在"xxxx"后接其他路径，url正常跳转，界面无法正常跳转。
+
+path举例：
+         path('xxxx/', views.blog.archive, name='xxxx'), 可以正常在"xxxx/"后面加其他路径，并且url正常跳转，界面正常跳转。
