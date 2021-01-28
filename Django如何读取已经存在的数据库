@@ -1,0 +1,3 @@
+0x00 Django如何读取已经存在的数据库？
+     # TODO 详细
+     先反解析数据库中的表，然后写入models.py中，不用migrate就可以用了
