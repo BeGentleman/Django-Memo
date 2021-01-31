@@ -2,6 +2,7 @@
      # TODO
      
 0x01 template模板继承有什么作用？
+     在前端代码有很多重复的代码出现的时候，可以写一个base父模板，所有子模版的继承自父模板，还能新增自己的功能，减少了代码重复。
 
 0x02 template模板继承的实现
      简单来讲，就是在base里需要继承的地方，用{% block content %}{% endblock %}包起来（content为自己写的内容，和html标签对应，例如class等等）
