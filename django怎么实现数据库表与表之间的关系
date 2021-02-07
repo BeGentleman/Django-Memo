@@ -1,2 +1,5 @@
 0x00 流程
      在models.py中设定
+     一对一关系：OneToOneField
+     多对一关系：ForeignKey
+     多对多关系：ManyToManyField
