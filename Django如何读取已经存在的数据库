@@ -1,3 +1,12 @@
 0x00 Django如何读取已经存在的数据库？
-     # TODO 详细
-     先反解析数据库中的表，然后写入models.py中，不用migrate就可以用了
+     大概流程：先反解析数据库中的表，然后写入models.py中，不用migrate就可以用了
+     
+     django由数据库表反向解析生成models.py:
+     语句为 python manage.py inspectdb
+     
+     之后需要对生成的信息进行必要的修改，因为有时不是一次就可以生成我们想要的models.py
+
+0x01 migrate究竟是什么？
+     migrate 是数据库迁移的工具，一般而言，用ddl（ddl是数据库模式定义bai语言）操作数据库相关
+     用migrate对django用orm关系产生的原生sql语句进行执行操作
+     在不需要创建表的时候，可以不用写 python manage.py migrate
