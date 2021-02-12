@@ -2,3 +2,5 @@
      # TODO
 
 0x01 怎么设定
+     大概流程：在settings.py中设定想要打印的log，然后在views.py中使用就可以了
+     # TODO：详细说明
