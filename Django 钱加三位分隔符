@@ -1,0 +1,4 @@
+0x00 实现
+      在前端引入 {% load humanize %}
+      
+      在参数部分{{ 参数| intcomma }}
