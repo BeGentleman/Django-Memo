@@ -3,9 +3,17 @@
 
 0x01 流程是什么？
      # TODO:validation check流程
+     用forms这个系统本身的类，继承它然后写error message，最后在前端反应出来。
+     
      
      Test流程
      针对目标函数或者类，编写对应的测试函数，可以用from django.test import TestCase这个库，然后测试结果主要用assert反应出来，最后执行python manage.py test.py就可以了
+     
+    
 
 0x02 举例子说明
      # TODO
+     views中先针对具体想要测试的地方创建一个新类，该类从forms中继承
+     class Name_Validation_Check(forms.forms):
+          name = forms.CharFiled(min_length=1, error_messages={"required":"xxxxxxxcuowu", "min_length":"xxxxxzuixiaowei"})
+     未完
