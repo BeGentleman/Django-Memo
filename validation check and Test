@@ -16,4 +16,17 @@
      views中先针对具体想要测试的地方创建一个新类，该类从forms中继承
      class Name_Validation_Check(forms.forms):
           name = forms.CharFiled(min_length=1, error_messages={"required":"xxxxxxxcuowu", "min_length":"xxxxxzuixiaowei"})
-     未完
+     
+     然后在对应的方法中需要进行valdiation check的地方，添加
+     obj = Name_Validation_Check(request.POST)
+     
+     status = obj.is_valid()
+     success_dict = obj.clean()
+     failed_dict = obj.errors.as_json()
+     
+     最后验证正确的时候就不传error message
+     验证错误的时候加上 {"xxxxx":obj.errors}
+     
+     前端调用时
+     {{ xxxxx.name.0 }}
+     
