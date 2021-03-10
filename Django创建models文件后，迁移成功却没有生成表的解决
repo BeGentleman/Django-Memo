@@ -2,3 +2,8 @@
      原因： 关键字 managed=False
      在反向生成models.py文件的时候，有时会自动生成这句话，表示不会生成一张表，所以要将这句话变成 managed = True
      这样重新进行迁移就会成功生成表
+
+     注意：
+     在再次迁移的时候，很有可能还是无法生成表，原因是在数据库表django_mirgations中，已经存在了一次创建过的记录，
+     得把这条记录删除，然后将app中migrations文件加下的生成记录也删除比如0001.initial.py等等都删除，
+     然后重新makemirgations,migrate,这时在数据库中才会出现表。
