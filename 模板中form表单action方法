@@ -1,0 +1,7 @@
+0x00 action是干啥的
+     # TODO: 补充缺失的情况
+     action = 'x/'是一个正确用法
+     
+     x/ 就是路径，django会根据这个路径，到urls.py中匹配对应的url，并在views.py中匹配相对应的方法；
+     如果不写 '/', 会报一个"You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set."错误；
+     如果没有action，就会出现界面跳转，而地址栏不变的情况
